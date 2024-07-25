@@ -7,8 +7,6 @@ Important notice
 **We decided to move onto Symfony Messenger and we are therefore not maintaining this repository anymore. Feel free to fork it and
 make it your own.**
 
-[![Latest Stable Version](https://poser.pugx.org/slm/queue/v/stable.png)](https://packagist.org/packages/slm/queue)
-
 SlmQueue is a job queue abstraction layer for Laminas (formerly Zend Framework) and Mezzio (formerly Zend Expressive) applications. It supports various job queue systems and
 makes your application independent from the underlying system you use. The currently supported systems have each their
 own adapter library:
@@ -35,7 +33,18 @@ Installation
 ------------
 
 SlmQueue works with [Composer](http://getcomposer.org). Make sure you have the composer.phar downloaded and you have a
-`composer.json` file at the root of your project. To install it, add the following line into your `composer.json` file:
+`composer.json` file at the root of your project. To install this fork, add the new repository to your `composer.json` file
+
+```json
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/ubrk/SlmQueue"
+    }
+  ]
+```
+
+Then, add the following line into your `composer.json` file:
 
 ```json
 "require": {
